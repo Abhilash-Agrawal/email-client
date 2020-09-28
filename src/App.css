@@ -1,0 +1,309 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  height: 35px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.controls {
+  height: 40px;
+  background-color: #b4cfe6;
+}
+
+.folder {
+  float: left;
+    width: 13%;
+    padding-top: 16px;
+    height: calc(100vh - 80px);
+    background-color: #eaeaea;   
+}
+
+.folderHead {
+  font-size: larger;
+  margin: 20px;
+}
+
+.folderName {
+  height: 40px;
+  display: inline-table;
+  width: 76%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 20px;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  cursor: pointer;
+  align-items: center;
+}
+
+.folderLink {
+  text-decoration: none;
+}
+
+.folderCount {
+  display: inline-flex;
+  float: right;
+  padding-right: 20px;
+}
+
+.mailBox {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.selectBox {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 25em;
+  border-right: 1px solid #d6d6d6;
+  overflow-y: auto;
+}
+
+.mailItem {
+  padding: 9px 0px 12px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    overflow: hidden;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: lightgrey;
+    padding-right: 24px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.mailItemUnread {
+  border-left-color: #1188e4;
+}
+
+.mailItemButton {
+  right: 0;
+  padding: 1px 0 0 5px;
+  flex-flow: row-reverse;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.mailItemSender {
+  display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    flex: 1 1 auto;
+    color: #636363;
+    position: relative;
+}
+
+.mailItemSubject {
+  color: #0078d4;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 23px;
+}
+
+.mailItemContent {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.viewBox {
+  flex-grow: 3;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.viewSubjectBox {
+  -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.viewSubject {
+  margin: 0 20px;
+  padding: 17px 0 12px 0;
+  flex-wrap: wrap;
+    line-height: 24px;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 600;
+    display: inline;
+    font-size: 22px;
+    word-break: break-word;
+}
+
+.viewContentBox {
+  border: 1px solid lightgray;
+  margin: 8px 20px 8px 8px;
+  padding: 0 12px 12px 12px;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.viewContent {
+  margin: 12px 16px 0 52px;
+}
+
+.action {
+  position: absolute;
+}
+
+.actionDiv {
+  position: relative;
+  display: inline-flex;
+  display: none;
+}
+
+.flagged {
+  display: inline-flex;
+}
+
+.mailItem:hover .actionDiv  {
+  display: inline-flex;
+  position: relative;
+  margin: 2px;
+}
+
+.mailItem:hover {
+  background-color: #f5f2f2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.hideCount {
+  display: none;
+}
+
+.filterButton {
+  float: right;
+  margin: 8px;
+}
+
+.selectBoxControl{
+  height: 40px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.selectBoxHead {
+  font-size: 22px;
+  margin-left: 20px;
+}
+
+.selectedHead {
+  color:  #1188e4;
+  text-decoration: underline;
+}
+
+.search {
+  width: 13%;
+  display: inline-block;
+  padding: 10px;
+}
+
+.searchIcon {
+  padding-left: 12px;
+}
+
+.logo {
+  background-color: #1188e4;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+}
+
+.logoIcon {
+  padding: 10px;
+}
+
+.titleHead {
+  font-size: 30px;
+  padding-left: 26px;
+}
+
+.noMailSelected {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.mailIcon {
+  width: 100% !important;
+}
+
+.refresh {
+  float: right;
+}
+
+.selectedFolder {
+  background-color: #afdcff;
+}
+
+.selectedMail {
+  background-color: #e7f4ff;
+}
